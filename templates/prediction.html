@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>loan prediction</title>
+  </head>
+  <body>
+    <section class="text-red-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white-900">Enter the value of CREDIT features </h1>
+      <br>
+
+
+
+<style>
+
+h1 {
+background-color: black;
+color: white;
+}
+h3 {
+background-color: ;
+color: black;
+}
+</style>
+
+
+
+
+
+      <h2><b>{{prediction_text}}</b></h2>
+    </div>
+    <div>
+
+    </div>
+<form action='/predict' method='POST'>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">YOUR GENDER </label>
+  <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="male">male</option>
+  <option value="female">female</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">ARE YOU MARRIED ?</label>
+  <select class="form-select" id="marriedr" name="marriedr" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="single">single</option>
+  <option value="married">married</option>
+  <option value="widowed">widowed</option>
+</select>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR MEANS OF IDENTIFICATION ?</label>
+  <select class="form-select" id="m_identification" name="m_identification" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="National ID Card">National ID Card</option>
+  <option value="National Driver’s Licence">National Driver’s Licence</option>
+  <option value="Valid INEC Voter’s Card">Valid INEC Voter’s Card</option>
+  <option value="NIN">NIN</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">DO YOU HAVE A WORKING EMAIL ADDRESS ?</label>
+  <select class="form-select" id="email_address" name="email_address" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT TYPE OF LOAN ARE YOU APPLYING FOR ?</label>
+  <select class="form-select" id="type_of_loan" name="type_of_loan" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="personal home loan">personal home loan</option>
+  <option value="joint mortgage">joint mortgage</option>
+  <option value="salary loan">salary loan</option>
+  <option value="secured overdraft">secured overdraft</option>
+</select>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">HOW LONG HAVE YOU BEEN EMPLOYED IN YOUR PRESENT JOB ?</label>
+  <select class="form-select" id="employment_years_pr" name="employment_years_pr" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="less than one year">less than one year</option>
+  <option value="two years">two years</option>
+  <option value="three years">three years</option>
+  <option value="four years">four years</option>
+  <option value="five years">five years</option>
+  <option value="six years">six years</option>
+  <option value="seven years">seven years</option>
+  <option value="eight years">eight years</option>
+  <option value="nine years">nine years</option>
+</select>
+</div>
+
+
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT'S YOUR TYPE OF OOCUPATION ?</label>
+  <select class="form-select" id="occupation_type" name="occupation_type" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="Laborer">Laborer</option>
+  <option value="teacher">teacher</option>
+  <option value="Driver">Driver</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">DO YOU HAVE A CAR ?</label>
+  <select class="form-select" id="own_car" name="own_car" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">DO YOU OWNED A HOUSE ?</label>
+  <select class="form-select" id="own_house" name="own_house" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR EDUCATIONAL QUALIFICATION ?</label>
+  <select class="form-select" id="edu_qualification" name="edu_qualification" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="Graduate">Graduate</option>
+  <option value="Post Graduate">Post Graduate</option>
+  <option value="Professional">Professional</option>
+  <option value="Primary School Leaving Certificate">Primary School Leaving Certificate</option>
+  <option value="Secondary School">Secondary School</option>
+
+</select>
+</div>
+
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR TYPE OF ACCOMODATION ?</label>
+  <select class="form-select" id="accomodation_type" name="accomodation_type" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="Rented">Rented</option>
+  <option value="owned">owned</option>
+  <option value="Official Quarters">Official Quarters</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR TYPE OF APARTMENT ?</label>
+  <select class="form-select" id="apartment_type" name="apartment_type" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="one room">one room</option>
+  <option value="two rooms">two rooms</option>
+  <option value="three rooms">three rooms</option>
+  <option value="four rooms">four rooms</option>
+  <option value="five rooms">five rooms</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS THE CONDITION OF THE REGION YOU ARE LIVING IN ?</label>
+  <select class="form-select" id="living_region_condi" name="living_region_condi" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="very good">very good</option>
+  <option value="good">good</option>
+  <option value="very bad">very bad</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHEN WAS THE LAST TIME YOU RECHARGED YOUR DSTV / GOtv ?</label>
+  <select class="form-select" id="dstv_recharge" name="dstv_recharge" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="less than three weeks ago">less than three weeks ago</option>
+  <option value="two months ago">two months ago</option>
+  <option value="three months ago">three months ago</option>
+  <option value="less than six months">less than six months</option>
+  <option value="a year ago">a year ago</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHEN WAS THE LAST TIME YOU PAID FOR YOUR NEPA BILL ?</label>
+  <select class="form-select" id="nepa_lastday_pay" name="nepa_lastday_pay" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="a year ago">a year ago</option>
+  <option value="less than six months">less than six months</option>
+  <option value="less than three weeks ago">less than three weeks ago</option>
+  <option value="three months ago">three months ago</option>
+  <option value="two months ago">two months ago</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHEN WAS THE LAST TIME YOU SUBSCRIBED YOUR PHONE ?</label>
+  <select class="form-select" id="phone_last_pay" name="phone_last_pay" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="a year ago">a year ago</option>
+  <option value="less than six months">less than six months</option>
+  <option value="less than three weeks ago">less than three weeks ago</option>
+  <option value="three months ago">three months ago</option>
+  <option value="two months ago">two months ago</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT TYPE OF HOUSE DO YOU STAY ?</label>
+  <select class="form-select" id="house_type" name="house_type" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="Detached">Detached</option>
+  <option value="Duplex">Duplex</option>
+  <option value="Mansion">Mansion</option>
+  <option value="Penthouse">Penthouse</option>
+  <option value="Semi-detached">Semi-detached</option>
+  <option value="Terraced">Terraced</option>
+  <option value="block of flats">block of flats</option>
+  <option value="face-me i face-you">face-me i face-you</option>
+
+</select>
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR TYPE OF EMPLOYMENT ?</label>
+  <select class="form-select" id="employment_type" name="employment_type" aria-label="Default select example">
+  <option selected>select-------></option>
+  <option value="permanet">permanet</option>
+  <option value="contract">contract</option>
+</select>
+</div>
+
+
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS BVN ?</label>
+  <input type="text" class="form-control" id="BVN" name="BVN" placeholder="enter------->">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT IS YOUR MONTHLY INCOME TOTAL ?</label>
+  <input type="text" class="form-control" id="MONTHLY_INCOME_TOTAL" name="MONTHLY_INCOME_TOTAL" placeholder="enter------->">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">HOW MUCH LOAN DO YOU NEED ?</label>
+  <input type="text" class="form-control" id="LOAN_AMOUNT" name="LOAN_AMOUNT" placeholder="enter------->">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">HOW MUCH CREDIT ARE YOU OWNING BEFORE NOW ?</label>
+  <input type="text" class="form-control" id="OUTSTANDING_LOAN_BALANCE" name="OUTSTANDING_LOAN_BALANCE" placeholder="enter------->">
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">HOW MANY CHILDREN DO YOU HAVE ?</label>
+  <input type="text" class="form-control" id="COUNT_OF_CHILDREN" name="COUNT_OF_CHILDREN" placeholder="enter------->">
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">WHAT YEAR WERE YOU BORN ?</label>
+  <input type="text" class="form-control" id="YEAR_OF_BIRTH" name="YEAR_OF_BIRTH" placeholder="enter------->">
+</div>
+
+
+
+      <div class="button_cont" align="center"><a class="button_css"  target="_blank" rel="nofollow noopener">
+                 <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict credit stutus</strong></button></a>
+
+
+             </div>
+
+    </form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<center>
+<div>
+<a class="btn btn-primary" href="./" role="button">Back to Home</a>
+<!--<img src="static/gg.jpg" class="w3-border w3-padding" alt="credit dcore" style="width:100%"> -->
+</div>
+</center>
+
+
+
+  </div>
+</section>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+
+
+
+  </body>
+</html>
